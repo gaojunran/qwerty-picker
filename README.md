@@ -1,39 +1,9 @@
 # querty-picker
 
-This template should help get you started developing with Vue 3 in Vite.
+键盘背单词工具(qwerty-learner)[https://github.com/RealKai42/qwerty-learner]的自定义词库定制器。
 
-## Recommended IDE Setup
+**在网页中定制你自己的词库！**
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 如何使用
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-pnpm dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+访问(TODO)即可开始使用。如果无法连接可能需要代理服务，或者您可以使用源码自部署。
