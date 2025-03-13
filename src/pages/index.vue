@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { outlined } from '@primeuix/themes/aura/message';
 import { label } from '@primeuix/themes/aura/metergroup';
-import {Button, Textarea} from 'primevue';
+import { Button, Textarea } from 'primevue';
 import ConfirmDialog from 'primevue/confirmdialog';
 
 import { useConfirm } from "primevue/useconfirm";
@@ -19,12 +19,14 @@ function handleClick () {
     if (json.length === 0) {
       throw new Error("JSON format error");
     }
-    json.forEach((item, idx) => {
+    json.forEach((item, idx: number) => {
       if (!("name" in item && "trans" in item)) {
         throw new Error("JSON format error");
       }
       item.idx = idx;
       item.selected = true;
+      item.showTrans = false;
+      item.anchorPressed = false;
     });
     localStorage.setItem("dict", JSON.stringify(json));
     router.push("/picker")
