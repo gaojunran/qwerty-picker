@@ -24,7 +24,10 @@ app.use(createPinia())
 app.use(router)
 app.use(PrimeVue, {
   theme: {
-      preset: Aura
+      preset: Aura,
+      options: {
+        darkModeSelector: '.always-dark'
+      }
   }
 })
 app.component("Button", Button);
