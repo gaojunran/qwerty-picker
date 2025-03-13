@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="w-full min-h-screen bg-black p-20">
+  <div class="bg-black">
     <RouterView />
   </div>
 
