@@ -1,6 +1,6 @@
 # querty-picker
 
-键盘背单词工具(qwerty-learner)[https://github.com/RealKai42/qwerty-learner]的自定义词库定制器。
+🛠 键盘背单词工具[qwerty-learner](https://github.com/RealKai42/qwerty-learner)的自定义词库定制器。
 
 **在网页中定制你自己的词库！**
 

@@ -1,8 +1,8 @@
 {
-  "name": "querty-picker",
+  "name": "qwerty-picker",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -12,11 +12,17 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
+    "@primeuix/themes": "^1.0.0",
+    "@tailwindcss/vite": "^4.0.13",
     "pinia": "^3.0.1",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.3.2",
+    "tailwindcss": "^4.0.13",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^4.10.1",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.13.9",
     "@vitejs/plugin-vue": "^5.2.1",
@@ -27,9 +33,9 @@
     "jiti": "^2.4.2",
     "npm-run-all2": "^7.0.2",
     "typescript": "~5.8.0",
+    "unplugin-vue-router": "^0.12.0",
     "vite": "^6.2.1",
     "vite-plugin-vue-devtools": "^7.7.2",
-    "vue-tsc": "^2.2.8",
-    "@antfu/eslint-config": "^4.10.1"
+    "vue-tsc": "^2.2.8"
   }
 }
