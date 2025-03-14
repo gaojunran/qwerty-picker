@@ -62,10 +62,10 @@ function handleClick () {
     <div class="">
       <div class="flex gap-6 items-end">
         <h1 class="text-7xl font-bold gradient-text">Qwerty Picker</h1>
-        <Button icon="pi pi-github" severity="secondary" @click="openGithub"/>
+        <Button icon="pi pi-github" severity="secondary" class="" @click="openGithub"/>
       </div>
 
-      <p class="text-4xl mt-4 mb-12 font-bold">定制你自己的<span class="text-[#9b59b6]">记忆词库</span></p>
+      <p class="text-4xl mt-4 mb-12 font-bold">定制你自己的<span class="text-purple-500">记忆词库</span></p>
 
 
       <div class="mb-4 font-bold">

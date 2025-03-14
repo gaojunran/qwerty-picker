@@ -6,10 +6,12 @@ import { onMounted, ref, watch } from 'vue';
 const records = ref([] as Word[])
 const dict = ref([] as Word[])
 
-const first = ref(0)
-const size = ref(100)
+const first = ref(localStorage.getItem('first') ? Number(localStorage.getItem('first') as string) : 0)
+const size = ref(localStorage.getItem('size') ? Number(localStorage.getItem('size') as string) : 100)
 
 watch([first, size], ([newFirst, newSize], [oldFirst, oldSize]) => {
+  localStorage.setItem('first', newFirst.toString())
+  localStorage.setItem('size', newSize.toString())
   records.value.splice(oldFirst, oldSize, ...dict.value)
   localStorage.setItem('dict', JSON.stringify(records.value))
   dict.value = records.value.slice(newFirst, newFirst + newSize)
@@ -28,7 +30,7 @@ function setShowTrans(idx: number, show: boolean) {
 }
 
 function setSelected(idx: number, selected: boolean) {
-  dict.value[idx - first.value].selected = selected
+  dict.value[idx - first.value].selected = selected // 会同时体现在records.value中，引用的是同一个对象
 }
 
 function toggleAll() {
@@ -92,7 +94,6 @@ onMounted(() => {
         <Button icon="pi pi-file-export" label="导出定制词库" @click="downloadJson"/>
       </div>
     </div>
-
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
       <WordCard
         v-for="word in dict"
@@ -111,7 +112,7 @@ onMounted(() => {
 
     <Paginator
       :total-records="records.length"
-      :rows-per-page-options="[20, 25, 30, 50, 100]"
+      :rows-per-page-options="[1, 5, 20, 25, 30, 50, 100]"
       v-model:first="first"
       v-model:rows="size"
       class="mb-12"
