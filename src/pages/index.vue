@@ -74,6 +74,11 @@ function handleClick () {
           href="https://github.com/RealKai42/qwerty-learner/tree/master/public/dicts"
           class="text-gray-300/50 hover:text-white transition underline underline-offset-4">来这里找词典
         </a>
+        <span>&#20;&#20;</span>
+        <a
+          href="/picker"
+          class="text-gray-300/50 hover:text-white transition underline underline-offset-4">回到定制页面
+        </a>
         <p class="text-gray-300/50 mt-1 font-normal">如果内容过多导致浏览器卡顿，请使用Chrome浏览器并耐心等待。</p>
       </div>
       <Textarea v-model="text" rows="18" cols="80" />
